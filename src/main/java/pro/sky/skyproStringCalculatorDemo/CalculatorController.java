@@ -18,10 +18,28 @@ public class CalculatorController {
     }
 
 //    calculator/plus?num1=5&num2=5
-//    plus?NAME=yuliya
 
     @GetMapping(path = "/plus")
-    public String answerCalculator(@RequestParam("NAME") String userCalculator) {
-        return calculatorService.answerCalculator(userCalculator);
+    public int plus(@RequestParam("num1") int num1,@RequestParam("num2") int num2) {
+        return calculatorService.plusSum(num1,num2);
     }
+
+//    /calculator/minus?num1=5&num2=5
+    @GetMapping(path = "/minus")
+    public int minus(@RequestParam("num1") int num1,@RequestParam("num2") int num2) {
+        return calculatorService.minusSum(num1,num2);
+    }
+
+//    /calculator/multiply?num1=5&num2=5
+    @GetMapping(path = "/multiply")
+    public int multiply(@RequestParam("num1") int num1,@RequestParam("num2") int num2) {
+        return calculatorService.multiplySum(num1,num2);
+    }
+///calculator/divide?num1=5&num2=5
+
+    @GetMapping(path = "/divide")
+    public int divide(@RequestParam("num1") int num1,@RequestParam("num2") int num2) {
+        return calculatorService.divideSum(num1,num2);
+    }
+
 }

@@ -10,8 +10,18 @@ public class CalculatorServiceImpl implements CalculatorService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String answerCalculator(String userCalculator) {
-        return "hello " + userCalculator;
+    public int plusSum(int num1, int  num2) {
+        return num1 + num2;
+    }
+
+    public int minusSum(int num1, int  num2) {
+        return num1 - num2;
+    }
+
+    public int multiplySum(int num1, int  num2) {
+        return num1 * num2;
+    } public int divideSum(int num1, int  num2) {
+        return num1 / num2;
     }
 
 }
