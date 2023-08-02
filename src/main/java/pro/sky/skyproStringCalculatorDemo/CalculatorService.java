@@ -1,6 +1,6 @@
 package pro.sky.skyproStringCalculatorDemo;
 
-public interface HelloService {
-    String hello();
+public interface CalculatorService {
+    String calculator();
     String answerHello(String userName);
 }
