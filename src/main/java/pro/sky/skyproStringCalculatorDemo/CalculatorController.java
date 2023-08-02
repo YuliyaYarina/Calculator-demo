@@ -5,20 +5,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@RestController()
 public class CalculatorController {
     private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService){
         this.calculatorService = calculatorService;
     }
-    @GetMapping
+    @GetMapping(path = "/calculator")
     public String calculator() {
         return calculatorService.calculator();
     }
 
-    @GetMapping(path = "/hello")
-    public String answerHello(@RequestParam("NAME") String userName) {
-        return calculatorService.answerHello(userName);
+//    calculator/plus?num1=5&num2=5
+//    plus?NAME=yuliya
+
+    @GetMapping(path = "/plus")
+    public String answerCalculator(@RequestParam("NAME") String userCalculator) {
+        return calculatorService.answerCalculator(userCalculator);
     }
 }
