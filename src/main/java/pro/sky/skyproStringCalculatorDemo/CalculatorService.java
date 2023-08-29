@@ -1,9 +1,8 @@
 package pro.sky.skyproStringCalculatorDemo;
 
 public interface CalculatorService {
-    String calculator();
-    int plusSum(int num1,int num2);
-    int minusSum(int num1,int num2);
-    int multiplySum(int num1,int num2);
-    int divideSum(int num1,int num2);
+    String plus(Integer num1, Integer num2);
+    String minus(Integer num1, Integer num2);
+    String multiply(Integer num1, Integer num2);
+    String divide(Integer num1, Integer num2);
 }
